@@ -2,8 +2,6 @@
 
 Workbench is my curated collection of single-purpose browser tools designed for UI/UX designers, graphic artists, and frontend developers. I built this with a focus on visual excellence and operational speed. Every tool runs 100% in the browser—no backend, no server, and zero data tracking.
 
-![Workbench Banner](https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=1200)
-
 ## The Philosophy
 
 - **100% Local**: No data ever leaves my machine. Privacy by design.
