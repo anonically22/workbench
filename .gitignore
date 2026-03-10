@@ -22,6 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-impli.txt
-code.html
-screen.png
+
+# Scratch and Output Files
+out*.txt
+build_*.txt
+lint_*.txt
+impli*.txt
+code*.html
+screen*.png
+.gemini/

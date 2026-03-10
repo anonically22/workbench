@@ -124,6 +124,117 @@ const getPreview = (slug, icon) => {
                     </div>
                 </div>
             );
+        case 'tint-shade-generator':
+            return (
+                <div className="w-full h-full flex flex-col items-center bg-white cursor-crosshair">
+                    <div className="w-full h-1/3 bg-slate-200"></div>
+                    <div className="w-full h-1/3 bg-slate-500"></div>
+                    <div className="w-full h-1/3 bg-slate-900 border-t-2 border-black flex items-center justify-center">
+                        <span className="material-symbols-outlined text-white text-3xl opacity-50">exposure</span>
+                    </div>
+                </div>
+            );
+        case 'tailwind-shade-generator':
+            return (
+                <div className="w-full h-full flex items-center bg-slate-100">
+                    <div className="flex-1 h-full bg-slate-200"></div>
+                    <div className="flex-1 h-full bg-slate-400"></div>
+                    <div className="flex-1 h-full mx-1 translate-y-2 bg-slate-700 border-2 border-black drop-shadow-md"></div>
+                    <div className="flex-1 h-full bg-black"></div>
+                </div>
+            );
+        case 'color-name-finder':
+            return (
+                <div className="w-full h-full bg-accent flex items-center justify-center relative">
+                    <div className="absolute w-24 h-12 bg-white/40 backdrop-blur-sm border-2 border-black flex items-center justify-center transform -rotate-6 shadow-xl">
+                        <span className="text-[10px] font-black tracking-widest text-black uppercase drop-shadow-sm">Accent</span>
+                    </div>
+                </div>
+            );
+        case 'accessible-color-pair-finder':
+            return (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-black text-white relative">
+                    <span className="text-6xl font-black mb-1">Aa</span>
+                    <span className="text-[10px] uppercase font-black tracking-[0.3em] bg-white/10 text-white border border-white/50 px-3 py-1 -mt-2">Pass 12.0</span>
+                </div>
+            );
+        case 'image-resizer':
+            return (
+                <div className="w-full h-full bg-slate-100 p-6 flex items-center justify-center">
+                    <div className="w-20 h-14 border-4 dashed border-black flex items-center justify-center relative bg-white/50">
+                        <span className="absolute -top-4 w-full text-center text-[10px] font-black font-mono">1920</span>
+                        <span className="absolute -right-6 top-1/2 -translate-y-1/2 text-[10px] font-black font-mono rotate-90">1080</span>
+                        <span className="material-symbols-outlined text-xl opacity-30">aspect_ratio</span>
+                    </div>
+                </div>
+            );
+        case 'base64-image-encoder':
+            return (
+                <div className="w-full h-full bg-slate-50 flex flex-col items-center justify-center gap-1 overflow-hidden p-4 border border-slate-200">
+                    <div className="w-10 h-10 border-2 border-black bg-slate-200 mb-2 flex items-center justify-center"><span className="material-symbols-outlined text-black">image</span></div>
+                    <div className="text-[8px] mt-1 font-mono font-bold leading-[10px] text-center w-[120%] text-slate-400 opacity-60 break-all select-none">
+                        data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA...
+                    </div>
+                </div>
+            );
+        case 'exif-metadata-viewer':
+            return (
+                <div className="w-full h-full bg-white flex flex-col p-4 border-2 border-slate-100 outline outline-4 outline-slate-50 outline-offset-[-12px]">
+                    <div className="flex border-b-2 border-black pb-2 items-center gap-2 mb-2">
+                        <span className="material-symbols-outlined text-xl text-accent">camera</span>
+                        <div className="h-1.5 w-1/2 bg-slate-800"></div>
+                    </div>
+                    <div className="flex flex-col gap-1.5 opacity-50 pl-2 border-l border-slate-300">
+                        <div className="h-1 w-3/4 bg-slate-400"></div>
+                        <div className="h-1 w-1/2 bg-slate-400"></div>
+                        <div className="h-1 w-2/3 bg-slate-400"></div>
+                    </div>
+                </div>
+            );
+        case 'noise-texture-generator':
+            return (
+                <div className="w-full h-full relative p-4 flex items-center justify-center bg-slate-900 overflow-hidden">
+                    <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMSIvPjwvc3ZnPg==')] mix-blend-overlay filter blur-[0.5px]"></div>
+                    <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/10 to-black/40"></div>
+                    <span className="material-symbols-outlined text-white opacity-40 text-4xl mix-blend-overlay z-10">grain</span>
+                </div>
+            );
+        case 'diff-checker':
+            return (
+                <div className="w-full h-full flex relative border-4 border-white bg-slate-50">
+                    <div className="flex-1 bg-slate-200 p-3 pt-6 flex flex-col gap-2 relative overflow-hidden border-r border-slate-300">
+                        <div className="h-[2px] w-full bg-slate-400 relative"><div className="absolute inset-0 bg-white/40 top-1/2 rotate-1 scale-110 h-[1px]"></div></div>
+                        <div className="h-1 w-3/4 bg-slate-300"></div>
+                    </div>
+                    <div className="flex-1 bg-accent/10 p-3 pt-6 flex flex-col gap-2 relative border-l border-slate-200">
+                        <div className="h-2 w-[110%] bg-accent/20 box-content px-2 -ml-2 -mt-1"><div className="h-[2px] w-full bg-accent translate-y-1"></div></div>
+                        <div className="h-1 w-4/5 bg-accent/40 translate-y-2"></div>
+                    </div>
+                </div>
+            );
+        case 'encoding-tools':
+            return (
+                <div className="w-full h-full flex flex-col justify-center items-center bg-black text-white p-2">
+                    <div className="font-mono text-xl font-black">"UTF8"</div>
+                    <span className="material-symbols-outlined block text-accent my-1 rotate-90 scale-75">sync_alt</span>
+                    <div className="font-mono text-sm tracking-widest opacity-50">%22%</div>
+                </div>
+            );
+        case 'box-shadow-generator':
+            return (
+                <div className="w-full h-full flex items-center justify-center bg-slate-100 relative pt-3 pl-3">
+                    <div className="w-16 h-16 bg-white border-2 border-black drop-shadow-[6px_6px_0_theme(colors.accent)] transition-transform group-hover:translate-x-1 group-hover:-translate-y-1 relative group-hover:drop-shadow-[10px_10px_0_theme(colors.accent)] z-10">
+                    </div>
+                </div>
+            );
+        case 'grid-system-calculator':
+            return (
+                <div className="w-full h-full p-6 flex gap-3 h-full bg-slate-50 border-4 border-slate-200">
+                    <div className="flex-1 border-x-4 border-x-accent/50 bg-slate-200 h-full w-4 relative isolate"></div>
+                    <div className="flex-1 border-x-4 border-x-accent/50 bg-slate-200 h-full w-4 relative isolate"></div>
+                    <div className="flex-1 border-x-4 border-x-accent/50 bg-slate-200 h-full w-4 relative hidden sm:block"></div>
+                </div>
+            );
         default:
             return (
                 <div className="w-full h-full bg-gradient-to-br from-accent/10 to-accent/30 flex items-center justify-center">

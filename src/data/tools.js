@@ -133,5 +133,113 @@ export const tools = [
         category: "IMAGE SHOP",
         tags: ["icon", "branding"],
         icon: "web"
+    },
+    {
+        id: "WB-016",
+        slug: "tint-shade-generator",
+        name: "Tint & Shade Generator",
+        description: "Generate lighter and darker variations of a base color.",
+        category: "COLOR LAB",
+        tags: ["design", "colors"],
+        icon: "contrast"
+    },
+    {
+        id: "WB-017",
+        slug: "tailwind-shade-generator",
+        name: "Tailwind Shade Generator",
+        description: "Generate a full Tailwind-style color scale (50–950) from a base color.",
+        category: "COLOR LAB",
+        tags: ["design", "css", "tailwind"],
+        icon: "gradient"
+    },
+    {
+        id: "WB-018",
+        slug: "color-name-finder",
+        name: "Color Name Finder",
+        description: "Identify the closest named color from a HEX value.",
+        category: "COLOR LAB",
+        tags: ["design", "colors"],
+        icon: "colorize"
+    },
+    {
+        id: "WB-019",
+        slug: "accessible-color-pair-finder",
+        name: "Accessible Color Pair",
+        description: "Suggest foreground colors that pass WCAG contrast rules for a selected background.",
+        category: "COLOR LAB",
+        tags: ["a11y", "design"],
+        icon: "accessibility"
+    },
+    {
+        id: "WB-020",
+        slug: "image-resizer",
+        name: "Image Resizer",
+        description: "Resize uploaded images to custom dimensions with aspect ratio lock.",
+        category: "IMAGE SHOP",
+        tags: ["image", "utility"],
+        icon: "aspect_ratio"
+    },
+    {
+        id: "WB-021",
+        slug: "base64-image-encoder",
+        name: "Base64 Image Encoder",
+        description: "Convert uploaded images into Base64 strings.",
+        category: "IMAGE SHOP",
+        tags: ["image", "code"],
+        icon: "code"
+    },
+    {
+        id: "WB-022",
+        slug: "exif-metadata-viewer",
+        name: "EXIF Metadata Viewer",
+        description: "Extract and display image metadata such as camera model and exposure.",
+        category: "IMAGE SHOP",
+        tags: ["image", "info"],
+        icon: "info"
+    },
+    {
+        id: "WB-023",
+        slug: "noise-texture-generator",
+        name: "Noise Texture Generator",
+        description: "Generate subtle PNG noise textures for UI backgrounds.",
+        category: "IMAGE SHOP",
+        tags: ["design", "texture"],
+        icon: "blur_on"
+    },
+    {
+        id: "WB-024",
+        slug: "diff-checker",
+        name: "Diff Checker",
+        description: "Compare two text inputs and highlight differences.",
+        category: "DEV UTILITIES",
+        tags: ["dev", "code"],
+        icon: "difference"
+    },
+    {
+        id: "WB-025",
+        slug: "encoding-tools",
+        name: "Encoding Tools",
+        description: "Support Base64 encode/decode, URL encode/decode, and HTML encode/decode.",
+        category: "DEV UTILITIES",
+        tags: ["dev", "security"],
+        icon: "lock"
+    },
+    {
+        id: "WB-026",
+        slug: "box-shadow-generator",
+        name: "Box Shadow Generator",
+        description: "Interactive UI to generate CSS box-shadow values.",
+        category: "DEV UTILITIES",
+        tags: ["css", "design"],
+        icon: "layers"
+    },
+    {
+        id: "WB-027",
+        slug: "grid-system-calculator",
+        name: "Grid System Calculator",
+        description: "Calculate column widths, gutters, and margins for responsive layout grids.",
+        category: "LAYOUT TOOL",
+        tags: ["design", "css"],
+        icon: "grid_4x4"
     }
 ];

@@ -22,7 +22,24 @@ const toolComponentMap = {
   "password-generator": lazy(() => import('./tools/developer-tools/PasswordGenerator.jsx')),
   "markdown-previewer": lazy(() => import('./tools/content-writing/MarkdownPreviewer.jsx')),
   "image-compressor": lazy(() => import('./tools/images-assets/ImageCompressor.jsx')),
-  "favicon-generator": lazy(() => import('./tools/images-assets/FaviconGenerator.jsx'))
+  "favicon-generator": lazy(() => import('./tools/images-assets/FaviconGenerator.jsx')),
+
+  // Phase 2 Tools
+  "tint-shade-generator": lazy(() => import('./tools/colour/TintShadeGenerator.jsx')),
+  "tailwind-shade-generator": lazy(() => import('./tools/colour/TailwindShades.jsx')),
+  "color-name-finder": lazy(() => import('./tools/colour/ColourNameFinder.jsx')),
+  "accessible-color-pair-finder": lazy(() => import('./tools/colour/AccessiblePairs.jsx')),
+
+  "image-resizer": lazy(() => import('./tools/images-assets/ImageResizer.jsx')),
+  "base64-image-encoder": lazy(() => import('./tools/images-assets/Base64Encoder.jsx')),
+  "exif-metadata-viewer": lazy(() => import('./tools/images-assets/EXIFDataViewer.jsx')),
+  "noise-texture-generator": lazy(() => import('./tools/images-assets/NoiseGenerator.jsx')),
+
+  "diff-checker": lazy(() => import('./tools/developer-tools/DiffChecker.jsx')),
+  "encoding-tools": lazy(() => import('./tools/developer-tools/EncodingTools.jsx')),
+  "box-shadow-generator": lazy(() => import('./tools/ui-components/BoxShadowGenerator.jsx')),
+
+  "grid-system-calculator": lazy(() => import('./tools/layout-spacing/GridSystemCalculator.jsx')),
 };
 
 function App() {

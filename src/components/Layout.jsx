@@ -11,7 +11,7 @@ export default function Layout() {
     };
 
     return (
-        <div className="min-h-screen bg-background-light text-slate-900 selection:bg-primary/20 flex flex-col">
+        <div className="min-h-screen text-slate-900 selection:bg-primary/20 flex flex-col">
             <div className="max-w-[1200px] mx-auto px-4 md:px-6 w-full flex-grow flex flex-col pt-8">
 
                 {/* Global Header */}
@@ -80,7 +80,7 @@ export default function Layout() {
                         <div className="space-y-6">
                             <h4 className="text-base font-bold uppercase tracking-[0.3em]">TOOL STATUS</h4>
                             <div className="bg-white border-2 border-black p-4 flex items-center gap-3 brutalist-shadow-sm">
-                                <span className="w-3 h-3 rounded-none bg-green-500 animate-pulse border-2 border-black"></span>
+                                <span className="w-3 h-3 rounded-none bg-blue-500 animate-pulse border-2 border-black"></span>
                                 <span className="text-sm font-bold tracking-[0.2em] uppercase text-black">ALL TOOLS WORKING</span>
                             </div>
                         </div>
@@ -89,12 +89,12 @@ export default function Layout() {
                     {/* Footer Bottom */}
                     <div className="pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-xs font-bold uppercase tracking-[0.2em]">
                         <div>
-                            © 2026 CRAFTED WITH <span className="text-red-500 mx-1">♥</span> BY ANONICAL
+                            © 2026 CRAFTED WITH <span className="text-red-500 mx-1">♥</span> BY ANONICAL22
                         </div>
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-6 w-full md:w-auto">
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-black rounded-none"></span>
-                                BUILD VERSION v0.3
+                                BUILD VERSION v0.5
                             </span>
                             <span className="w-px h-4 bg-black/20"></span>
                             <button onClick={scrollToTop} className="flex items-center gap-2 hover:text-accent transition-colors">

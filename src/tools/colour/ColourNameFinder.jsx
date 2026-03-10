@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import chroma from 'chroma-js';
-import colorNameList from 'color-name-list';
+import { colornames as colorNameList } from 'color-name-list';
 import { Search, Copy, Tag, RefreshCw } from 'lucide-react';
+import ToolShell from '../../components/ToolShell';
 
 export default function ColourNameFinder() {
     const [color, setColor] = useState('#6366F1');
@@ -13,9 +14,7 @@ export default function ColourNameFinder() {
 
     const findNames = () => {
         try {
-            // Find closest color in the list
-            // The list is huge, so we might want to sample or use a more efficient search if it's too slow
-            // But for now, let's find the absolute closest
+            if (!chroma.valid(color)) return;
             const target = chroma(color).rgb();
 
             // We'll calculate Euclidean distance
@@ -39,83 +38,87 @@ export default function ColourNameFinder() {
     };
 
     return (
-        <div className="p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-                <div>
-                    <label className="block text-sm font-semibold mb-2">Pick a Colour</label>
-                    <div className="flex gap-4 p-6 bg-sidebar rounded-2xl border border-border items-center">
-                        <input
-                            type="color"
-                            value={color}
-                            onChange={(e) => setColor(e.target.value)}
-                            className="w-24 h-24 rounded-2xl border-4 border-white cursor-pointer shadow-soft shrink-0"
-                        />
-                        <div className="flex-1 space-y-2">
-                            <div className="relative">
+        <ToolShell
+            title="Color Name Finder"
+            description="Identify the closest named color from a HEX value using a massive curated database."
+        >
+            <div className="grid md:grid-cols-2 gap-8">
+                {/* Control Panel */}
+                <div className="space-y-6 p-6 border-2 border-black bg-white brutalist-shadow-sm">
+                    <div className="space-y-2">
+                        <label className="block text-sm font-bold uppercase tracking-[0.2em] text-black">Pick a Color</label>
+                        <div className="flex gap-4 items-center">
+                            <input
+                                type="color"
+                                value={color}
+                                onChange={(e) => setColor(e.target.value)}
+                                className="w-16 h-16 border-2 border-black cursor-pointer brutalist-shadow-sm shrink-0 p-0"
+                            />
+                            <div className="flex-1 relative">
                                 <input
                                     type="text"
                                     value={color.toUpperCase()}
                                     onChange={(e) => setColor(e.target.value)}
-                                    className="w-full bg-background border border-border p-3 rounded-xl font-mono text-lg font-black uppercase text-primary transition-all focus:border-primary outline-none"
+                                    className="w-full p-3 border-2 border-black brutalist-shadow-sm focus:outline-none focus:ring-2 focus:ring-accent font-mono text-lg uppercase"
                                 />
-                                <Search className="absolute right-3 top-3.5 text-text-secondary opacity-30" size={20} />
+                                <Search className="absolute right-3 top-3.5 text-black opacity-30" size={20} />
                             </div>
-                            <button
-                                onClick={() => setColor(chroma.random().hex())}
-                                className="flex items-center gap-2 text-xs font-bold text-text-secondary hover:text-primary transition-colors"
-                            >
-                                <RefreshCw size={14} />
-                                Surprise me
-                            </button>
                         </div>
+                    </div>
+                    <button
+                        onClick={() => setColor(chroma.random().hex())}
+                        className="w-full px-6 py-3 bg-accent text-white font-bold tracking-[0.2em] uppercase border-2 border-black brutalist-shadow-hover flex items-center justify-center gap-2"
+                    >
+                        <RefreshCw size={18} />
+                        Random Color
+                    </button>
+                    <div
+                        className="h-32 border-2 border-black flex items-center justify-center brutalist-shadow-sm"
+                        style={{ backgroundColor: chroma.valid(color) ? color : '#fff' }}
+                    >
+                        <span className={`text-xs font-bold uppercase tracking-widest px-4 py-2 bg-white/30 border-2 border-black backdrop-blur-sm ${chroma.valid(color) && chroma(color).luminance() > 0.5 ? 'text-black' : 'text-white'}`}>
+                            Sampling Area
+                        </span>
                     </div>
                 </div>
 
-                <div
-                    className="h-32 rounded-2xl border border-border shadow-inner transition-colors duration-500 flex items-center justify-center"
-                    style={{ backgroundColor: color }}
-                >
-                    <span className={`text-[10px] font-black uppercase tracking-[0.4em] px-4 py-1 rounded-full bg-white/20 backdrop-blur-sm ${chroma(color).luminance() > 0.5 ? 'text-black/60' : 'text-white/60'}`}>
-                        Sampling Area
-                    </span>
-                </div>
-            </div>
+                {/* Results List */}
+                <div className="space-y-4">
+                    <h3 className="text-xl font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+                        <Tag size={20} className="text-accent" />
+                        Closest Matches
+                    </h3>
 
-            <div className="space-y-4">
-                <div className="flex items-center gap-2 mb-2">
-                    <Tag size={18} className="text-primary" />
-                    <h3 className="text-sm font-bold text-text-primary">Closest Named Matches</h3>
-                </div>
-
-                <div className="space-y-3">
-                    {foundNames.map((n, i) => (
-                        <div
-                            key={`${n.hex}-${i}`}
-                            className={`group relative bg-surface border border-border p-5 rounded-2xl flex items-center gap-4 transition-all hover:border-primary/30 ${i === 0 ? 'ring-2 ring-primary/10 bg-primary/5' : ''}`}
-                        >
-                            <div className="w-12 h-12 rounded-xl shadow-sm border border-white/20 shrink-0" style={{ backgroundColor: n.hex }} />
-                            <div className="flex-1">
-                                <div className="flex items-center gap-2">
-                                    <h4 className={`font-bold ${i === 0 ? 'text-primary text-base' : 'text-text-primary text-sm'}`}>{n.name}</h4>
-                                    {i === 0 && <span className="text-[9px] font-black uppercase px-2 py-0.5 bg-primary text-white rounded-full">Top Match</span>}
-                                </div>
-                                <p className="font-mono text-[10px] text-text-secondary opacity-70 uppercase tracking-widest">{n.hex}</p>
-                            </div>
-                            <button
-                                onClick={() => navigator.clipboard.writeText(n.name)}
-                                className="p-3 opacity-0 group-hover:opacity-100 bg-white shadow-sm border border-border rounded-xl text-text-secondary hover:text-primary transition-all active:scale-90"
-                                title="Copy Name"
+                    <div className="space-y-4">
+                        {foundNames.map((n, i) => (
+                            <div
+                                key={`${n.hex}-${i}`}
+                                className={`group relative bg-white border-2 border-black p-4 flex items-center gap-4 transition-all hover:-translate-y-1 brutalist-shadow-hover ${i === 0 ? 'bg-slate-50' : ''}`}
                             >
-                                <Copy size={16} />
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                                <div className="w-16 h-16 border-2 border-black brutalist-shadow-sm shrink-0" style={{ backgroundColor: n.hex }} />
+                                <div className="flex-1">
+                                    <div className="flex flex-wrap items-center gap-2 mb-1">
+                                        <h4 className="font-bold text-lg uppercase tracking-wider">{n.name}</h4>
+                                        {i === 0 && <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-1 bg-accent border-2 border-black text-white">Top Match</span>}
+                                    </div>
+                                    <p className="font-mono text-xs text-black opacity-70 uppercase tracking-widest">{n.hex}</p>
+                                </div>
+                                <button
+                                    onClick={() => navigator.clipboard.writeText(n.name)}
+                                    className="p-3 opacity-0 group-hover:opacity-100 bg-white border-2 border-black text-black hover:bg-accent hover:text-white transition-colors brutalist-shadow-hover"
+                                    title="Copy Name"
+                                >
+                                    <Copy size={18} />
+                                </button>
+                            </div>
+                        ))}
+                    </div>
 
-                <p className="text-[10px] text-text-secondary text-center italic mt-4">
-                    Curated from a database of over 30,000 unique color names.
-                </p>
+                    <p className="text-[10px] font-bold tracking-widest uppercase text-slate-500 text-center mt-6">
+                        Curated from 30,000+ named colors
+                    </p>
+                </div>
             </div>
-        </div>
+        </ToolShell>
     );
 }

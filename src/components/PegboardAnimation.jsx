@@ -6,10 +6,10 @@ export default function PegboardAnimation() {
 
     // Total animation loop = 4 seconds
     return (
-        <div className="relative border-2 border-black bg-slate-50 flex items-center justify-center overflow-hidden h-12 w-[180px] brutalist-shadow-sm group cursor-default">
+        <div className="relative border-2 border-black bg-slate-200 flex items-center justify-center overflow-hidden h-12 w-[180px] brutalist-shadow-sm group cursor-default">
             {/* Pegboard Background Pattern */}
             <div
-                className="absolute inset-0 opacity-10"
+                className="absolute inset-0 opacity-20"
                 style={{
                     backgroundImage: 'radial-gradient(black 2px, transparent 2px)',
                     backgroundSize: '10px 10px',

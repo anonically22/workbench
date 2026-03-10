@@ -9,71 +9,35 @@ Workbench is my curated collection of single-purpose browser tools designed for 
 - **Premium Aesthetics**: A brutalist, handcrafted aesthetic inspired by modern editorial design.
 - **Zero Friction**: No accounts, no logins, no paywalls.
 
+## Progress Update: Phase 2 Complete (v0.5)
+
+I've just finished implementing **Phase 2**, bringing the total up to **27 fully functional tools**. 
+
+**Recent Updates:**
+- Added 12 new tools spanning Color Lab, Image Shop, Layout Tool, and Dev Utilities.
+- Refined the visual design system to strict brutalism (Black, White, Slate, and Accent Blue).
+- Added unique, CSS-only abstract previews for every newly added tool card.
+- Implemented a custom framed "Pegboard" animation in the global header using Framer Motion.
+- Applied a matching, subtle pegboard radical-gradient background across the entire workspace.
+- Consolidated the application footer with the new v0.5 build metadata.
+
 ## The Toolkit
 
-Workbench Phase 1 includes 66 tools across 11 high-utility categories:
+Currently featuring 27 tools across core high-utility categories:
 
-- **Greatest Hits**: QR Code generators, Palette builders.
-- **Social Media**: Previews for Twitter threads, LinkedIn posts, and Instagram grids.
-- **Color Lab**: Contrast checkers, Blindness simulators, and UI System builders.
-- **Image Shop**: SVG optimizers, EXIF viewers, and high-quality noise generators.
-- **Type & Text**: Type scales, Font pair suggestions, and Readability checkers.
-- **Layout & Spacing**: 8pt grid visualizers, Golden Ratio grids, and Viewport helpers.
-- **UI Components**: Interactive generators for Glassmorphism, Shadows, and Buttons.
-- **Dev Utilities**: JSON formatters, CSS-to-Tailwind converters, and Meta Tag generators.
-- **Content & Writing**: Copy-paste cleaners, Title capitalizers, and Regex testers.
-- **UX Research**: SUS Score calculators, Empathy maps, and Persona builders.
-- **Print & Production**: Bleed calculators, Paper size references, and CMYK converters.
-- **Calculators**: Freelance tax estimators, Project profitability, and Salary converters.
+- **Color Lab**: Tint & Shade Generators, Accessible Color Pair Finders, Tailwind Shade generators, etc.
+- **Image Shop**: Image Resizers, Base64 Encoders, EXIF Metadata Viewers, and PNG Noise Texture Generators.
+- **Dev Utilities**: Box Shadow generators, Diff Checkers, SVG optimization, etc.
+- **Layout Tool**: Grid System Calculators and Aspect Ratio math overhauls.
 
 ## Tech Stack
 
-- **Framework**: React JS (Vanilla JS)
+- **Framework**: React JS
 - **Tooling**: Vite
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+- **Styling**: Tailwind CSS v4
+- **Icons**: Lucide React / Material Symbols
 - **Routing**: React Router v6
 - **Animations**: Framer Motion
-
-## Getting Started
-
-Here are the commands and steps I use to build and run this from scratch, or after cloning.
-
-### 1. Initial Setup (If starting from scratch)
-To create a new project matching this stack:
-```bash
-npx create-vite workbench --template react
-cd workbench
-npm install
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
-npm install react-router-dom lucide-react framer-motion clsx tailwind-merge
-```
-
-### 2. Install dependencies (If cloning)
-Ensure Node.js is installed, then run:
-```bash
-npm install
-```
-
-### 3. Run the development server
-Start the local server with hot-reload:
-```bash
-npm run dev
-```
-
-### 4. Open in browser
-Navigate to http://localhost:5173 to start using the toolkit.
-
----
-
-## Build and Deployment
-
-To create a production-ready bundle:
-```bash
-npm run build
-```
-The optimized assets will be generated in the `dist/` directory.
 
 ## Architecture Note
 
@@ -81,4 +45,34 @@ I built Workbench using a Lazy-Loaded Route Architecture. Each tool is stored in
 
 ---
 
-Built for my own creative workflows.
+## Build & Install Instructions
+
+Here are the step-by-step commands to build the initial foundation and run everything locally:
+
+### 1. Initial Scaffold & Dependencies
+To create a new project matching this stack, run:
+```bash
+npx create-vite workbench --template react
+cd workbench
+npm install
+npm install tailwindcss @tailwindcss/vite
+npm install react-router-dom lucide-react framer-motion chroma-js diff exifr color-name-list
+```
+
+### 2. Running Locally (If Cloning)
+If cloning this repository to a new machine, install the dependencies and start the dev server:
+```bash
+npm install
+npm run dev
+```
+
+### 3. Production Build
+To create a production-ready bundle optimized for deployment:
+```bash
+npm run build
+```
+The optimized static assets will be generated in the `dist/` directory, ready to be hosted on any static platform.
+
+---
+
+*Built for my own creative workflows.*

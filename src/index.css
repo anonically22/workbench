@@ -23,6 +23,9 @@
   body {
     @apply bg-background text-text-primary antialiased;
     font-family: var(--font-sans);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    background-size: 10px 10px;
+    background-position: 0 0;
   }
 }
 
