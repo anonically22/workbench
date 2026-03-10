@@ -52,7 +52,7 @@ export default function ImageResizer() {
         ctx.drawImage(image, 0, 0, width, height);
 
         const link = document.createElement('a');
-        link.download = `nixby-resized-${width}x${height}.png`;
+        link.download = `workbench-resized-${width}x${height}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };

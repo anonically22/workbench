@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Type, Copy, RefreshCw, Layers, AlignLeft } from 'lucide-react';
 
 const LOREM = [
-    "Nixby is the ultimate design toolkit for modern creators. Build faster, smarter, and more efficiently with locally running browser tools.",
+    "Workbench is the ultimate design toolkit for modern creators. Build faster, smarter, and more efficiently with locally running browser tools.",
     "Typography is the soul of any interface. Choosing the right scale and weight can transform a basic layout into a premium experience.",
     "Color theory is both a science and an art. Use harmonic rules to create palettes that evoke the right emotions in your audience.",
     "Digital assets require precision. From SVG optimization to pixel-perfect resizes, every byte matters in high-performance web development.",
@@ -95,7 +95,7 @@ export default function LoremIpsum() {
                 </div>
 
                 <p className="text-[10px] text-text-secondary italic text-center">
-                    * Nixby uses "Design Ipsum" which results in more realistic line lengths than standard Lorem Ipsum.
+                    * Workbench uses "Design Ipsum" which results in more realistic line lengths than standard Lorem Ipsum.
                 </p>
             </div>
         </div>

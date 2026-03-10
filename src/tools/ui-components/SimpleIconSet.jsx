@@ -13,9 +13,7 @@ export default function SimpleIconSet() {
         .slice(0, 100); // Limit for performance
 
     const copySVG = (name) => {
-        const Icon = LucideIcons[name];
         // This is a simplified way to get SVG string for the user
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="${stroke}" stroke-linecap="round" stroke-linejoin="round"></svg>`;
         alert(`Icon component name "${name}" copied! Ready for React projects.`);
         navigator.clipboard.writeText(`<${name} size={${size}} strokeWidth={${stroke}} color="${color}" />`);
     };
@@ -55,7 +53,7 @@ export default function SimpleIconSet() {
                     <Info className="text-primary" size={24} />
                     <p className="text-[10px] font-black uppercase text-text-secondary tracking-widest">Icon Library</p>
                     <p className="text-[11px] text-text-secondary leading-relaxed">
-                        Nixby integrates the full Lucide icon set. Use these for rapid prototyping or production apps.
+                        Workbench integrates the full Lucide icon set. Use these for rapid prototyping or production apps.
                     </p>
                 </div>
             </div>

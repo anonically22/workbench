@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Type, Copy, RefreshCw, FileText, Info, Eye } from 'lucide-react';
 
 export default function MarkdownPreviewer() {
-    const [text, setText] = useState('# Hello Nixby\n\nThis is a **markdown** previewer.\n\n- Local tools\n- 100% Client-side\n- Privacy focused');
+    const [text, setText] = useState('# Hello Workbench\n\nThis is a **markdown** previewer.\n\n- Local tools\n- 100% Client-side\n- Privacy focused');
 
     // Extremely basic markdown to HTML for demonstration without heavy deps
     const render = (md) => {
@@ -43,7 +43,7 @@ export default function MarkdownPreviewer() {
                 <div className="p-6 bg-white border border-border rounded-3xl flex items-center gap-4">
                     <Info className="text-primary shrink-0" size={20} />
                     <p className="text-[11px] text-text-secondary">
-                        Nixby processes markdown instantaneously. Perfect for drafting GitHub readmes or blog posts without context-switching.
+                        Workbench processes markdown instantaneously. Perfect for drafting GitHub readmes or blog posts without context-switching.
                     </p>
                 </div>
             </div>

@@ -66,7 +66,7 @@ export default function InputStylist() {
                             <label className="text-[10px] font-black uppercase text-text-secondary tracking-widest px-1">Email Address</label>
                             <input
                                 type="email"
-                                placeholder="hello@nixby.design"
+                                placeholder="hello@workbench.design"
                                 className="transition-all duration-200"
                                 style={{
                                     backgroundColor: bg,

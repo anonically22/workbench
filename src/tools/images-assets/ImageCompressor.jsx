@@ -44,7 +44,7 @@ export default function ImageCompressor() {
     const download = () => {
         const link = document.createElement('a');
         link.href = URL.createObjectURL(compressedBlob);
-        link.download = `nixby-compressed-${file.name}`;
+        link.download = `workbench-compressed-${file.name}`;
         link.click();
     };
 
@@ -83,7 +83,7 @@ export default function ImageCompressor() {
                 <div className="p-4 bg-sidebar rounded-xl border border-border border-dashed flex gap-3">
                     <ShieldCheck className="text-green-500 shrink-0" size={18} />
                     <p className="text-[11px] text-text-secondary leading-relaxed">
-                        Nixby uses worker threads for local compression. Your sensitive images never touch a server.
+                        Workbench uses worker threads for local compression. Your sensitive images never touch a server.
                     </p>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { optimize } from 'svgo/dist/svgo.browser.js';
 import { Upload, Download, Zap, Code, FileCode } from 'lucide-react';
 
 export default function SVGOptimiser() {
     const [svg, setSvg] = useState('');
     const [optimized, setOptimized] = useState('');
     const [stats, setStats] = useState(null);
+    const [loading, setLoading] = useState(false);
 
     const handleUpload = (e) => {
         const file = e.target.files[0];
@@ -20,8 +20,22 @@ export default function SVGOptimiser() {
         }
     };
 
-    const process = (raw) => {
+    const process = async (raw) => {
+        if (!raw) return;
+        setLoading(true);
         try {
+            // Check if svgo is already loaded (lazy loading from CDN)
+            if (!window.svgo) {
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    script.src = 'https://cdn.jsdelivr.net/npm/svgo@3.0.2/dist/svgo.browser.js';
+                    script.onload = resolve;
+                    script.onerror = reject;
+                    document.head.appendChild(script);
+                });
+            }
+
+            const { optimize } = window.svgo;
             const result = optimize(raw, {
                 multipass: true,
                 plugins: [
@@ -38,6 +52,8 @@ export default function SVGOptimiser() {
             });
         } catch (e) {
             console.error(e);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -45,7 +61,7 @@ export default function SVGOptimiser() {
         const blob = new Blob([optimized], { type: 'image/svg+xml' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(blob);
-        link.download = 'nixby-optimized.svg';
+        link.download = 'workbench-optimized.svg';
         link.click();
     };
 
@@ -125,7 +141,7 @@ export default function SVGOptimiser() {
                 </div>
 
                 <p className="text-[10px] text-text-secondary text-center leading-relaxed">
-                    Nixby SVGO cleans up redundant code, namespaces, and minifies paths while maintaining visual integrity.
+                    Workbench SVGO cleans up redundant code, namespaces, and minifies paths while maintaining visual integrity.
                 </p>
             </div>
         </div>

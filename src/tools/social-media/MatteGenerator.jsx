@@ -81,7 +81,7 @@ export default function MatteGenerator() {
     const download = () => {
         const canvas = canvasRef.current;
         const link = document.createElement('a');
-        link.download = `nixby-matte-${currentPreset.name.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.download = `workbench-matte-${currentPreset.name.replace(/\s+/g, '-').toLowerCase()}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };

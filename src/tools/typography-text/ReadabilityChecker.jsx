@@ -69,7 +69,7 @@ export default function ReadabilityChecker() {
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         className="w-full h-[450px] p-8 rounded-[40px] border-2 border-border bg-background focus:border-primary outline-none transition-all text-base leading-loose shadow-soft"
-                        placeholder="Nixby makes readability analysis instant and private..."
+                        placeholder="Workbench makes readability analysis instant and private..."
                     />
                 </div>
             </div>

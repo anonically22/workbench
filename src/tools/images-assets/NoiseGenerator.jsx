@@ -43,7 +43,7 @@ export default function NoiseGenerator() {
     const download = () => {
         const canvas = canvasRef.current;
         const link = document.createElement('a');
-        link.download = 'nixby-noise-tile.png';
+        link.download = 'workbench-noise-tile.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
     };

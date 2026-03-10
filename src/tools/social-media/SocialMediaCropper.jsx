@@ -103,7 +103,7 @@ export default function SocialMediaCropper() {
     const download = () => {
         const canvas = canvasRef.current;
         const link = document.createElement('a');
-        link.download = `nixby-crop-${platform}-${currentFormat.name.replace(/\s+/g, '-').toLowerCase()}.png`;
+        link.download = `workbench-crop-${platform}-${currentFormat.name.replace(/\s+/g, '-').toLowerCase()}.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };
@@ -205,7 +205,7 @@ export default function SocialMediaCropper() {
 
                 <div className="flex justify-between items-center">
                     <p className="text-xs text-text-secondary italic">
-                        * Nixby processes everything locally. Your image never leaves your browser.
+                        * Workbench processes everything locally. Your image never leaves your browser.
                     </p>
                     <button
                         disabled={!image}

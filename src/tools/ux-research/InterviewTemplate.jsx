@@ -33,7 +33,7 @@ const SCENARIOS = [
 
 export default function InterviewTemplate() {
     const [scenario, setScenario] = useState(SCENARIOS[0]);
-    const [topic, setTopic] = useState('Nixby Design Toolkit');
+    const [topic, setTopic] = useState('Workbench Design Toolkit');
 
     return (
         <div className="p-6 grid grid-cols-1 lg:grid-cols-5 gap-8">

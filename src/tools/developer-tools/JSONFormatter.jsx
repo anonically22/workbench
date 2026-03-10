@@ -33,7 +33,7 @@ export default function JSONFormatter() {
                         value={data}
                         onChange={(e) => setData(e.target.value)}
                         className={`w-full h-[500px] p-8 rounded-[40px] border-2 bg-background focus:border-primary outline-none transition-all font-mono text-sm leading-relaxed shadow-soft ${error ? 'border-red-500' : 'border-border'}`}
-                        placeholder='Paste your JSON here: { "name": "Nixby" }'
+                        placeholder='Paste your JSON here: { "name": "Workbench" }'
                     />
                     <div className="absolute top-6 right-6 flex gap-2">
                         <button
@@ -91,7 +91,7 @@ export default function JSONFormatter() {
                 <div className="p-6 bg-primary/5 rounded-[40px] border border-primary/10 flex items-start gap-4">
                     <Info size={24} className="text-primary shrink-0" />
                     <p className="text-[11px] text-text-secondary leading-relaxed">
-                        Nixby processes JSON purely on the client side. Your data never leaves your browser, keeping API keys and sensitive payloads private.
+                        Workbench processes JSON purely on the client side. Your data never leaves your browser, keeping API keys and sensitive payloads private.
                     </p>
                 </div>
             </div>

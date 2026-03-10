@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { ShieldCheck, Copy, RefreshCw, FileText, Info, CheckCircle2 } from 'lucide-react';
 
 export default function ConsentGenerator() {
-    const [project, setProject] = useState('Nixby User Research');
-    const [company, setCompany] = useState('Nixby Labs');
+    const [project, setProject] = useState('Workbench User Research');
+    const [company, setCompany] = useState('Workbench Labs');
     const [duration, setDuration] = useState('45 minutes');
 
     const text = `

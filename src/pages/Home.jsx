@@ -1,46 +1,65 @@
+import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { tools } from '../data/tools';
 import ToolCard from '../components/ToolCard';
+import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+function cn(...inputs) {
+    return twMerge(clsx(inputs));
+}
 
 export default function Home() {
-    const categories = [...new Set(tools.map(tool => tool.category))];
+    const [activeCategory, setActiveCategory] = useState("ALL TOOLS");
+
+    const categories = ["ALL TOOLS", ...new Set(tools.map(t => t.category))];
+
+    const filteredTools = tools.filter(tool => {
+        return activeCategory === "ALL TOOLS" || tool.category === activeCategory;
+    });
 
     return (
-        <div className="space-y-16 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {/* Hero Section */}
-            <section className="text-center space-y-4 pt-8">
-                <h1 className="text-5xl font-black text-text-primary tracking-tight">
-                    Nixby<span className="text-primary">.</span>
-                </h1>
-                <p className="text-xl text-text-secondary font-medium">
-                    A personal toolkit for UI/UX and graphic design.
-                </p>
-                <div className="flex items-center justify-center gap-2 text-xs font-bold uppercase tracking-widest text-text-secondary/50">
-                    <span className="w-8 h-[1px] bg-border"></span>
-                    100% Client-Side • No Tracking • Handmade
-                    <span className="w-8 h-[1px] bg-border"></span>
+        <div className="animate-in fade-in duration-500">
+            {/* Navigation / Categories */}
+            <nav className="flex flex-wrap gap-4 mb-12 items-center">
+                <div className="flex overflow-x-auto gap-4 pb-2 w-full flex-wrap">
+                    {categories.map(cat => (
+                        <button
+                            key={cat}
+                            onClick={() => setActiveCategory(cat)}
+                            className={cn(
+                                "whitespace-nowrap px-6 py-2 font-bold uppercase border-2 border-black transition-colors focus:outline-none",
+                                activeCategory === cat
+                                    ? "bg-black text-white"
+                                    : "bg-white text-black hover:bg-slate-100"
+                            )}
+                        >
+                            {cat}
+                        </button>
+                    ))}
                 </div>
-            </section>
+            </nav>
 
             {/* Tools Grid */}
-            <div className="space-y-12">
-                {categories.map(category => (
-                    <section key={category} className="space-y-6">
-                        <div className="flex items-center gap-4">
-                            <h2 className="text-sm font-bold uppercase tracking-widest text-text-secondary shrink-0">
-                                {category}
-                            </h2>
-                            <div className="h-[1px] w-full bg-border"></div>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {tools
-                                .filter(tool => tool.category === category)
-                                .map(tool => (
-                                    <ToolCard key={tool.slug} {...tool} />
-                                ))}
-                        </div>
-                    </section>
-                ))}
-            </div>
+            {filteredTools.length > 0 ? (
+                <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
+                    {filteredTools.map((tool, idx) => (
+                        <motion.div
+                            key={tool.slug}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3, delay: idx * 0.05 }}
+                            className="h-full"
+                        >
+                            <ToolCard {...tool} />
+                        </motion.div>
+                    ))}
+                </main>
+            ) : (
+                <div className="py-20 text-center border-2 border-black border-dashed">
+                    <p className="text-2xl font-black uppercase">No tools found.</p>
+                </div>
+            )}
         </div>
     );
 }

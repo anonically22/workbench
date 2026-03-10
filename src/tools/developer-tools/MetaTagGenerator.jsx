@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { Globe, Copy, RefreshCw, Search, Info, Tag } from 'lucide-react';
 
 export default function MetaTagGenerator() {
-    const [title, setTitle] = useState('Nixby — Personal Design Toolkit');
+    const [title, setTitle] = useState('Workbench — Personal Design Toolkit');
     const [desc, setDesc] = useState('A collection of single-purpose browser tools for designers and developers.');
-    const [url, setUrl] = useState('https://nixby.design');
-    const [image, setImage] = useState('https://nixby.design/og.png');
+    const [url, setUrl] = useState('https://workbench.design');
+    const [image, setImage] = useState('https://workbench.design/og.png');
 
     const tags = `
 <!-- Primary Meta Tags -->

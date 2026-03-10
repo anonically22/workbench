@@ -79,7 +79,7 @@ export default function ScreenPicker() {
                         Ready for Design
                     </div>
                     <p className="text-xs text-green-600 leading-relaxed">
-                        Nixby uses the standard browser EyeDropper API. It&apos;s perfect for sampling brand colours from style guides or reference images.
+                        Workbench uses the standard browser EyeDropper API. It&apos;s perfect for sampling brand colours from style guides or reference images.
                     </p>
                     <div className="pt-2 flex flex-wrap gap-2">
                         {['#FFFFFF', '#000000', '#6366F1', '#F43F5E', '#10B981'].map(c => (

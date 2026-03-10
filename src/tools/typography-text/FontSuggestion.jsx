@@ -100,7 +100,7 @@ export default function FontSuggestion() {
 
                         <div className="space-y-4">
                             <p className="text-lg leading-relaxed text-text-secondary" style={{ fontFamily: current.body }}>
-                                Nixby is designed to simplify your creative workflow. Whether you're building a brand new landing page or optimizing assets for social media, our collection of browser-based tools run completely locally, protecting your privacy and speed.
+                                Workbench is designed to simplify your creative workflow. Whether you're building a brand new landing page or optimizing assets for social media, our collection of browser-based tools run completely locally, protecting your privacy and speed.
                             </p>
                             <p className="text-lg leading-relaxed text-text-secondary" style={{ fontFamily: current.body }}>
                                 Good typography isn't just about choosing a font; it's about the relationship between sizes, weights, and characters. This pairing has been chosen specifically for its balance of visual impact and long-form readability.

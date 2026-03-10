@@ -3,7 +3,7 @@ import QRCode from 'qrcode';
 import { Download, Copy, RefreshCw } from 'lucide-react';
 
 export default function QRGenerator() {
-    const [text, setText] = useState('https://nixby.tool');
+    const [text, setText] = useState('https://workbench.tool');
     const [size, setSize] = useState(256);
     const [fgColor, setFgColor] = useState('#000000');
     const [bgColor, setBgColor] = useState('#ffffff');
@@ -34,7 +34,7 @@ export default function QRGenerator() {
 
     const downloadQR = () => {
         const link = document.createElement('a');
-        link.download = 'nixby-qr.png';
+        link.download = 'workbench-qr.png';
         link.href = qrUrl;
         link.click();
     };

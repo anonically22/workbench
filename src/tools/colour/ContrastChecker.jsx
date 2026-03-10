@@ -51,7 +51,7 @@ export default function ContrastChecker() {
                     className="h-48 rounded-2xl flex flex-col items-center justify-center text-center p-8 shadow-inner border border-border transition-colors duration-500 overflow-hidden"
                     style={{ backgroundColor: bg, color: fg }}
                 >
-                    <h4 className="text-3xl font-black mb-1">Nixby Design</h4>
+                    <h4 className="text-3xl font-black mb-1">Workbench Design</h4>
                     <p className="text-sm">The quick brown fox jumps over the lazy dog.</p>
                     <div className="mt-6 px-4 py-2 rounded-full text-[10px] font-bold tracking-widest uppercase bg-black/10 backdrop-blur-sm">
                         Live Preview

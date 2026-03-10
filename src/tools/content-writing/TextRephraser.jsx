@@ -10,7 +10,7 @@ const SYNONYMS = {
 };
 
 export default function TextRephraser() {
-    const [text, setText] = useState('Nixby helps you build beautiful UIs fast.');
+    const [text, setText] = useState('Workbench helps you build beautiful UIs fast.');
     const [result, setResult] = useState('');
 
     const rephrase = () => {
@@ -34,7 +34,7 @@ export default function TextRephraser() {
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         className="w-full h-48 p-8 rounded-[40px] border-2 border-border bg-background focus:border-primary outline-none transition-all text-xl font-bold leading-relaxed shadow-soft"
-                        placeholder="Nixby makes design faster..."
+                        placeholder="Workbench makes design faster..."
                     />
                 </div>
 
@@ -84,7 +84,7 @@ export default function TextRephraser() {
                         How it works
                     </div>
                     <p className="text-[11px] text-text-secondary leading-relaxed">
-                        Nixby scans your text for common design keywords and swaps them with high-impact synonyms. Perfect for A/B testing copy.
+                        Workbench scans your text for common design keywords and swaps them with high-impact synonyms. Perfect for A/B testing copy.
                     </p>
                 </div>
             </div>

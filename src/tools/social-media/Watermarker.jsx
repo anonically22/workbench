@@ -72,7 +72,7 @@ export default function Watermarker() {
     const download = () => {
         const canvas = canvasRef.current;
         const link = document.createElement('a');
-        link.download = `nixby-watermarked.png`;
+        link.download = `workbench-watermarked.png`;
         link.href = canvas.toDataURL('image/png');
         link.click();
     };

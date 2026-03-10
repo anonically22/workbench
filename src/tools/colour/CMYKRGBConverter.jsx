@@ -57,7 +57,7 @@ export default function CMYKRGBConverter() {
 
                 <div className="p-4 bg-sidebar rounded-xl border border-border border-dashed flex gap-3 text-[11px] text-text-secondary leading-relaxed">
                     <Info size={18} className="text-primary shrink-0 mt-0.5" />
-                    CMYK to RGB conversion is subjective and depends on color profiles. Nixby uses standard mathematical conversion (SWOP approximation).
+                    CMYK to RGB conversion is subjective and depends on color profiles. Workbench uses standard mathematical conversion (SWOP approximation).
                 </div>
             </div>
 

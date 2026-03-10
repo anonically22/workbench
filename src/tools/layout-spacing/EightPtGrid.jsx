@@ -58,7 +58,7 @@ export default function EightPtGrid() {
                                 <span className="text-[10px] font-mono text-text-secondary w-12">{base} x {s}</span>
                                 <div className="flex items-center gap-2">
                                     <span className="text-sm font-black text-text-primary w-12">{base * s}px</span>
-                                    <div className="h-6 bg-primary/10 border border-primary/20 rounded hidden sm:block" style={{ width: base * s }} />
+                                    <div className="h-6 bg-primary/10 border border-primary/20 rounded hidden sm:block" style={{ width: `${base * s}px` }} />
                                 </div>
                             </div>
 

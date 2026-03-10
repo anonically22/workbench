@@ -3,26 +3,51 @@
 @theme {
   --color-background: #F8FAFC;
   --color-surface: #FFFFFF;
-  --color-primary: #6366F1;
+  --color-accent: #0d59f2;
   --color-text-primary: #1E293B;
   --color-text-secondary: #64748B;
   --color-border: #E2E8F0;
   --color-sidebar: #F1F5F9;
 
-  --radius-card: 8px;
+  --color-black: #000000;
 
-  --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius-card: 0px;
 
-  --font-sans: "Inter", system-ui, sans-serif;
+  --shadow-brutalist: 4px 4px 0px 0px #000000;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #000000;
+
+  --font-sans: "Poiret One", system-ui, sans-serif;
 }
 
-:root {
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
+@layer base {
+  body {
+    @apply bg-background text-text-primary antialiased;
+    font-family: var(--font-sans);
+  }
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+@layer utilities {
+  .brutalist-border {
+    border: 2px solid #000000;
+  }
+
+  .brutalist-shadow {
+    box-shadow: var(--shadow-brutalist);
+    transition: all 0.2s ease-out;
+  }
+
+  .brutalist-shadow-hover:hover {
+    box-shadow: var(--shadow-brutalist-hover);
+    transform: translate(-4px, -4px);
+  }
+
+  /* Hide scrollbar for clean horizontal scrolling */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }

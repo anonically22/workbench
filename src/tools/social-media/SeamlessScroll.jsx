@@ -88,7 +88,7 @@ export default function SeamlessScroll() {
         const content = await zip.generateAsync({ type: 'blob' });
         const link = document.createElement('a');
         link.href = URL.createObjectURL(content);
-        link.download = 'nixby-seamless-scroll.zip';
+        link.download = 'workbench-seamless-scroll.zip';
         link.click();
     };
 

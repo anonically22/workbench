@@ -3,7 +3,7 @@ import { Search, Copy, RefreshCw, Hash, Info, CheckCircle2, AlertCircle } from '
 
 export default function RegexTester() {
     const [pattern, setPattern] = useState('[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}');
-    const [text, setText] = useState('Contact us at hello@nixby.design or support@google.com');
+    const [text, setText] = useState('Contact us at hello@workbench.design or support@google.com');
     const [flags, setFlags] = useState('gi');
 
     const getMatches = () => {
