@@ -40,6 +40,23 @@ const toolComponentMap = {
   "box-shadow-generator": lazy(() => import('./tools/ui-components/BoxShadowGenerator.jsx')),
 
   "grid-system-calculator": lazy(() => import('./tools/layout-spacing/GridSystemCalculator.jsx')),
+
+  // Phase 3 Tools
+  "button-style-generator": lazy(() => import('./tools/ui-components/ButtonStyleGenerator.jsx')),
+  "shadow-palette-generator": lazy(() => import('./tools/ui-components/ShadowPaletteGenerator.jsx')),
+  "border-radius-scale-generator": lazy(() => import('./tools/ui-components/BorderRadiusScaleGenerator.jsx')),
+  "skeleton-screen-generator": lazy(() => import('./tools/ui-components/SkeletonScreenGenerator.jsx')),
+  
+  "flexbox-playground": lazy(() => import('./tools/layout-spacing/FlexboxPlayground.jsx')),
+  "golden-ratio-calculator": lazy(() => import('./tools/layout-spacing/GoldenRatioCalculator.jsx')),
+  "8pt-grid-checker": lazy(() => import('./tools/layout-spacing/EightPointGridChecker.jsx')),
+  
+  "text-case-converter": lazy(() => import('./tools/content-writing/TextCaseConverter.jsx')),
+  "lorem-ipsum-generator": lazy(() => import('./tools/content-writing/LoremIpsumGenerator.jsx')),
+  "readability-checker": lazy(() => import('./tools/content-writing/ReadabilityChecker.jsx')),
+  
+  "fake-data-generator": lazy(() => import('./tools/dev-utilities/FakeDataGenerator.jsx')),
+  "character-map-browser": lazy(() => import('./tools/dev-utilities/CharacterMapBrowser.jsx')),
 };
 
 function App() {

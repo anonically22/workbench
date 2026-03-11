@@ -235,6 +235,110 @@ const getPreview = (slug, icon) => {
                     <div className="flex-1 border-x-4 border-x-accent/50 bg-slate-200 h-full w-4 relative hidden sm:block"></div>
                 </div>
             );
+        case 'button-style-generator':
+            return (
+                <div className="w-full h-full flex items-center justify-center bg-slate-100">
+                    <div className="px-6 py-2 bg-accent text-white font-bold border-2 border-black brutalist-shadow text-xs">CLICK ME</div>
+                </div>
+            );
+        case 'shadow-palette-generator':
+            return (
+                <div className="w-full h-full flex items-center justify-center bg-white relative">
+                    <div className="w-12 h-12 bg-white border-2 border-black absolute translate-x-2 translate-y-2 opacity-20"></div>
+                    <div className="w-12 h-12 bg-white border-2 border-black absolute translate-x-1 translate-y-1 opacity-50"></div>
+                    <div className="w-12 h-12 bg-white border-2 border-black relative"></div>
+                </div>
+            );
+        case 'border-radius-scale-generator':
+            return (
+                <div className="w-full h-full flex items-center justify-center bg-slate-200 p-4">
+                    <div className="w-full h-full border-4 border-black border-t-8 border-l-8 rounded-tr-xl rounded-bl-3xl bg-white"></div>
+                </div>
+            );
+        case 'skeleton-screen-generator':
+            return (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-white p-4 gap-2">
+                    <div className="w-12 h-12 bg-slate-200 self-start"></div>
+                    <div className="w-full h-2 bg-slate-200"></div>
+                    <div className="w-3/4 h-2 bg-slate-200 self-start"></div>
+                </div>
+            );
+        case 'flexbox-playground':
+            return (
+                <div className="w-full h-full flex items-center justify-between p-2 bg-slate-100 border-4 border-white">
+                    <div className="w-4 h-full bg-accent/20 border border-accent"></div>
+                    <div className="w-8 h-full bg-accent/40 border border-accent"></div>
+                    <div className="w-4 h-full bg-accent/20 border border-accent"></div>
+                </div>
+            );
+        case 'golden-ratio-calculator':
+            return (
+                <div className="w-full h-full flex bg-slate-100 p-2 gap-1">
+                    <div className="flex-[1.618] bg-white border border-black relative overflow-hidden">
+                       <div className="absolute top-0 right-0 w-full aspect-square border-l border-b border-black rounded-bl-full opacity-20"></div>
+                    </div>
+                    <div className="flex-1 flex flex-col gap-1">
+                        <div className="flex-[1.618] bg-white border border-black"></div>
+                        <div className="flex-1 bg-white border border-black"></div>
+                    </div>
+                </div>
+            );
+        case '8pt-grid-checker':
+            return (
+                <div className="w-full h-full bg-slate-50 relative overflow-hidden">
+                    <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(to right, #ccc 1px, transparent 1px), linear-gradient(to bottom, #ccc 1px, transparent 1px)', backgroundSize: '8px 8px' }}></div>
+                    <div className="absolute top-4 left-4 w-16 h-16 bg-accent/30 border-2 border-accent backdrop-blur-sm flex items-center justify-center">
+                        <span className="font-mono text-[8px] font-bold text-accent">24px</span>
+                    </div>
+                </div>
+            );
+        case 'text-case-converter':
+            return (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-black text-white p-2">
+                    <span className="font-mono text-xl tracking-widest uppercase">UPPER</span>
+                    <span className="material-symbols-outlined text-accent text-sm my-1">swap_vert</span>
+                    <span className="font-mono text-sm opacity-50">camelCase</span>
+                </div>
+            );
+        case 'lorem-ipsum-generator':
+            return (
+                <div className="w-full h-full bg-white p-4 overflow-hidden border-2 border-slate-100">
+                    <p className="font-serif text-[6px] leading-[10px] text-slate-400 text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            );
+        case 'readability-checker':
+            return (
+                <div className="w-full h-full flex flex-col items-center justify-center bg-slate-100">
+                    <div className="text-4xl font-black text-black">A+</div>
+                    <div className="text-[8px] uppercase tracking-widest font-bold text-slate-500 mt-1">Grade Level</div>
+                </div>
+            );
+        case 'fake-data-generator':
+            return (
+                <div className="w-full h-full bg-slate-50 p-2 flex flex-col gap-1 justify-center">
+                    <div className="flex items-center gap-2 bg-white border border-slate-200 px-2 py-1">
+                        <span className="material-symbols-outlined text-[10px] text-slate-400">person</span>
+                        <div className="h-1.5 w-16 bg-slate-300"></div>
+                    </div>
+                    <div className="flex items-center gap-2 bg-white border border-slate-200 px-2 py-1">
+                        <span className="material-symbols-outlined text-[10px] text-slate-400">mail</span>
+                        <div className="h-1.5 w-10 bg-slate-300"></div>
+                    </div>
+                </div>
+            );
+        case 'character-map-browser':
+            return (
+                <div className="w-full h-full flex items-center justify-center bg-slate-900 border-4 border-slate-700">
+                    <div className="grid grid-cols-2 gap-2 text-white font-mono text-xl">
+                        <span className="opacity-50 hover:opacity-100 cursor-default">⌘</span>
+                        <span className="opacity-50 hover:opacity-100 cursor-default">⌥</span>
+                        <span className="opacity-50 hover:opacity-100 cursor-default">⇧</span>
+                        <span className="text-accent hover:opacity-100 cursor-default">⎋</span>
+                    </div>
+                </div>
+            );
         default:
             return (
                 <div className="w-full h-full bg-gradient-to-br from-accent/10 to-accent/30 flex items-center justify-center">

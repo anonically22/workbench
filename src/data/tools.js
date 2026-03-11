@@ -236,10 +236,106 @@ export const tools = [
     {
         id: "WB-027",
         slug: "grid-system-calculator",
-        name: "Grid System Calculator",
-        description: "Calculate column widths, gutters, and margins for responsive layout grids.",
+        tags: ["css", "design"],
+        icon: "smart_button"
+    },
+    {
+        id: "WB-029",
+        slug: "shadow-palette-generator",
+        name: "Shadow Palette Generator",
+        description: "Generate elevation systems and box-shadow scales for UI design.",
+        category: "UI COMPONENTS",
+        tags: ["css", "design"],
+        icon: "layers"
+    },
+    {
+        id: "WB-030",
+        slug: "border-radius-scale-generator",
+        name: "Border Radius Scale Generator",
+        description: "Create consistent border radius tokens for design systems.",
+        category: "UI COMPONENTS",
+        tags: ["css", "design"],
+        icon: "rounded_corner"
+    },
+    {
+        id: "WB-031",
+        slug: "skeleton-screen-generator",
+        name: "Skeleton Screen Generator",
+        description: "Generate skeleton loading placeholders with HTML and CSS output.",
+        category: "UI COMPONENTS",
+        tags: ["html", "css", "loading"],
+        icon: "hourglass_empty"
+    },
+    {
+        id: "WB-032",
+        slug: "flexbox-playground",
+        name: "Flexbox Playground",
+        description: "Interactive playground for experimenting with flexbox properties.",
         category: "LAYOUT TOOL",
-        tags: ["design", "css"],
-        icon: "grid_4x4"
+        tags: ["css", "layout"],
+        icon: "view_stream"
+    },
+    {
+        id: "WB-033",
+        slug: "golden-ratio-calculator",
+        name: "Golden Ratio Calculator",
+        description: "Calculate proportional layouts using the golden ratio.",
+        category: "LAYOUT TOOL",
+        tags: ["math", "design"],
+        icon: "calculate"
+    },
+    {
+        id: "WB-034",
+        slug: "8pt-grid-checker",
+        name: "8pt Grid Checker",
+        description: "Check whether spacing values align with an 8pt grid system.",
+        category: "LAYOUT TOOL",
+        tags: ["math", "design"],
+        icon: "grid_on"
+    },
+    {
+        id: "WB-035",
+        slug: "text-case-converter",
+        name: "Text Case Converter",
+        description: "Convert text between uppercase, lowercase, camelCase, snake_case, kebab-case and more.",
+        category: "TEXT & CONTENT",
+        tags: ["text", "utility"],
+        icon: "text_format"
+    },
+    {
+        id: "WB-036",
+        slug: "lorem-ipsum-generator",
+        name: "Lorem Ipsum Generator",
+        description: "Generate placeholder text for design mockups.",
+        category: "TEXT & CONTENT",
+        tags: ["text", "content"],
+        icon: "notes"
+    },
+    {
+        id: "WB-037",
+        slug: "readability-checker",
+        name: "Readability Checker",
+        description: "Analyze readability score and reading grade level.",
+        category: "TEXT & CONTENT",
+        tags: ["text", "analysis"],
+        icon: "spellcheck"
+    },
+    {
+        id: "WB-038",
+        slug: "fake-data-generator",
+        name: "Fake Data Generator",
+        description: "Generate sample names, emails, addresses and lorem text for testing.",
+        category: "DATA UTILITIES",
+        tags: ["data", "testing"],
+        icon: "dataset"
+    },
+    {
+        id: "WB-039",
+        slug: "character-map-browser",
+        name: "Character Map Browser",
+        description: "Browse and copy special Unicode characters and symbols.",
+        category: "DATA UTILITIES",
+        tags: ["text", "symbols"],
+        icon: "emoji_symbols"
     }
 ];
