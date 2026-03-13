@@ -57,6 +57,23 @@ const toolComponentMap = {
   
   "fake-data-generator": lazy(() => import('./tools/dev-utilities/FakeDataGenerator.jsx')),
   "character-map-browser": lazy(() => import('./tools/dev-utilities/CharacterMapBrowser.jsx')),
+  
+  // Phase 4 Tools
+  "mockup-frame-generator": lazy(() => import('./tools/images-assets/MockupFrameGenerator.jsx')),
+  "seamless-scroll-generator": lazy(() => import('./tools/images-assets/SeamlessScrollGenerator.jsx')),
+  "watermarker": lazy(() => import('./tools/images-assets/Watermarker.jsx')),
+  "screen-color-picker": lazy(() => import('./tools/images-assets/ScreenColorPicker.jsx')),
+
+  "touch-target-checker": lazy(() => import('./tools/design-inspection/TouchTargetChecker.jsx')),
+  "reading-flow-simulator": lazy(() => import('./tools/design-inspection/ReadingFlowSimulator.jsx')),
+  "artboard-size-reference": lazy(() => import('./tools/design-inspection/ArtboardSizeReference.jsx')),
+
+  "bleed-margin-calculator": lazy(() => import('./tools/layout-spacing/BleedMarginCalculator.jsx')),
+  "export-multiplier-calculator": lazy(() => import('./tools/layout-spacing/ExportMultiplierCalculator.jsx')),
+
+  "css-clamp-generator": lazy(() => import('./tools/dev-utilities/CssClampGenerator.jsx')),
+  "css-grid-generator": lazy(() => import('./tools/dev-utilities/CssGridGenerator.jsx')),
+  "svg-path-visualizer": lazy(() => import('./tools/dev-utilities/SvgPathVisualizer.jsx')),
 };
 
 function App() {

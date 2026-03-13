@@ -47,7 +47,6 @@ export default function Layout() {
             </div>
 
             {/* Brutalist Technical Footer */}
-            {/* Brutalist Technical Footer */}
             <footer className="bg-white text-black py-16 mt-20 border-t-8 border-black font-sans">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b-4 border-black pb-16">
@@ -61,7 +60,7 @@ export default function Layout() {
                                 <span className="font-bold text-2xl uppercase tracking-[0.3em]">WORKBENCH</span>
                             </div>
                             <p className="text-sm font-bold leading-relaxed uppercase opacity-80 max-w-[250px] tracking-widest">
-                                Synthesizing code and aesthetics to build digital products that feel as good as they work.
+                                Built quietly for the modern web.
                             </p>
                         </div>
 
@@ -72,6 +71,14 @@ export default function Layout() {
                                 <a href="https://github.com/anonically22/workbench" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
                                     <Github size={18} strokeWidth={2.5} className="opacity-70" />
                                     GITHUB REPO
+                                </a>
+                                <a href="https://github.com/anonically22/workbench/issues/new" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors">
+                                    <Terminal size={18} strokeWidth={2.5} className="opacity-70" />
+                                    SUGGEST A TOOL
+                                </a>
+                                <a href="https://github.com/anonically22/workbench/issues/new" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-accent transition-colors text-red-600 hover:text-red-700">
+                                    <Terminal size={18} strokeWidth={2.5} className="opacity-70" />
+                                    REPORT A BUG
                                 </a>
                             </div>
                         </div>
@@ -94,7 +101,7 @@ export default function Layout() {
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-6 w-full md:w-auto">
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-black rounded-none"></span>
-                                BUILD VERSION v0.5
+                                BUILD VERSION v0.7
                             </span>
                             <span className="w-px h-4 bg-black/20"></span>
                             <button onClick={scrollToTop} className="flex items-center gap-2 hover:text-accent transition-colors">

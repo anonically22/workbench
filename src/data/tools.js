@@ -236,8 +236,20 @@ export const tools = [
     {
         id: "WB-027",
         slug: "grid-system-calculator",
+        name: "Grid System Calculator",
+        description: "Calculate and visualize column grid systems for web and print layouts.",
+        category: "LAYOUT TOOL",
         tags: ["css", "design"],
         icon: "smart_button"
+    },
+    {
+        id: "WB-028",
+        slug: "simple-icon-set",
+        name: "Simple Icon Set",
+        description: "Browse and copy common UI icons as SVG or code snippets.",
+        category: "UI COMPONENTS",
+        tags: ["icons", "svg", "design"],
+        icon: "interests"
     },
     {
         id: "WB-029",
@@ -337,5 +349,113 @@ export const tools = [
         category: "DATA UTILITIES",
         tags: ["text", "symbols"],
         icon: "emoji_symbols"
+    },
+    {
+        id: "WB-040",
+        slug: "mockup-frame-generator",
+        name: "Mockup Frame Generator",
+        description: "Wrap uploaded screenshots inside browser or device frames.",
+        category: "IMAGE SHOP",
+        tags: ["image", "design"],
+        icon: "devices"
+    },
+    {
+        id: "WB-041",
+        slug: "seamless-scroll-generator",
+        name: "Seamless Scroll Generator",
+        description: "Split an image into vertical slices for Instagram scroll posts.",
+        category: "IMAGE SHOP",
+        tags: ["image", "social"],
+        icon: "view_carousel"
+    },
+    {
+        id: "WB-042",
+        slug: "watermarker",
+        name: "Watermarker",
+        description: "Add customizable text or image watermarks to uploaded images.",
+        category: "IMAGE SHOP",
+        tags: ["image", "branding"],
+        icon: "branding_watermark"
+    },
+    {
+        id: "WB-043",
+        slug: "screen-color-picker",
+        name: "Screen Color Picker",
+        description: "Pick colors directly from the screen using the EyeDropper API.",
+        category: "IMAGE SHOP",
+        tags: ["color", "design"],
+        icon: "colorize"
+    },
+    {
+        id: "WB-044",
+        slug: "touch-target-checker",
+        name: "Touch Target Checker",
+        description: "Analyze whether UI elements meet recommended touch target sizes.",
+        category: "DESIGN INSPECTION",
+        tags: ["a11y", "design"],
+        icon: "touch_app"
+    },
+    {
+        id: "WB-045",
+        slug: "reading-flow-simulator",
+        name: "Reading Flow Simulator",
+        description: "Overlay reading patterns such as F-pattern and Z-pattern.",
+        category: "DESIGN INSPECTION",
+        tags: ["ux", "design"],
+        icon: "visibility"
+    },
+    {
+        id: "WB-046",
+        slug: "artboard-size-reference",
+        name: "Artboard Size Reference",
+        description: "Provide a searchable list of common screen and device artboard sizes.",
+        category: "DESIGN INSPECTION",
+        tags: ["layout", "design"],
+        icon: "crop_portrait"
+    },
+    {
+        id: "WB-047",
+        slug: "bleed-margin-calculator",
+        name: "Bleed & Margin Calculator",
+        description: "Calculate bleed area, trim size, and safe margins for print layouts.",
+        category: "LAYOUT TOOL",
+        tags: ["print", "layout"],
+        icon: "margin"
+    },
+    {
+        id: "WB-048",
+        slug: "export-multiplier-calculator",
+        name: "Export Multiplier Calculator",
+        description: "Calculate export sizes for 1x, 2x, 3x and 4x assets.",
+        category: "LAYOUT TOOL",
+        tags: ["export", "design"],
+        icon: "close_fullscreen"
+    },
+    {
+        id: "WB-049",
+        slug: "css-clamp-generator",
+        name: "CSS Clamp Generator",
+        description: "Generate responsive clamp() values for typography and spacing.",
+        category: "DEV UTILITIES",
+        tags: ["css", "responsive"],
+        icon: "compress"
+    },
+    {
+        id: "WB-050",
+        slug: "css-grid-generator",
+        name: "CSS Grid Generator",
+        description: "Interactive generator for CSS Grid layouts with preview and export.",
+        category: "DEV UTILITIES",
+        tags: ["css", "layout"],
+        icon: "grid_view"
+    },
+    {
+        id: "WB-051",
+        slug: "svg-path-visualizer",
+        name: "SVG Path Visualizer",
+        description: "Paste SVG path data and visualize curves and control points.",
+        category: "DEV UTILITIES",
+        tags: ["svg", "code"],
+        icon: "timeline"
     }
 ];
