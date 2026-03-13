@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Star } from 'lucide-react';
 import { tools } from '../data/tools';
 import ToolCard from '../components/ToolCard';
+import { useSiteConfig } from '../context/SiteConfigContext';
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -11,12 +13,21 @@ function cn(...inputs) {
 
 export default function Home() {
     const [activeCategory, setActiveCategory] = useState("ALL TOOLS");
+    const { homepageMode, featuredTools: featuredSlugs } = useSiteConfig();
 
     const categories = ["ALL TOOLS", ...new Set(tools.map(t => t.category).filter(Boolean))];
 
     const filteredTools = tools.filter(tool => {
         return activeCategory === "ALL TOOLS" || tool.category === activeCategory;
     });
+
+    // Resolve featured slugs to tool objects (max 6)
+    const featuredTools = featuredSlugs
+        .slice(0, 6)
+        .map(slug => tools.find(t => t.slug === slug))
+        .filter(Boolean);
+
+    const showFeatured = homepageMode === 'enhanced' && featuredTools.length > 0;
 
     return (
         <div className="animate-in fade-in duration-500">
@@ -32,6 +43,32 @@ export default function Home() {
                     <span className="bg-slate-100 border-2 border-slate-200 px-3 py-1">100% Browser Based</span>
                 </div>
             </div>
+
+            {/* Featured Tools — only in enhanced mode */}
+            {showFeatured && (
+                <section className="mb-16">
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="flex items-center gap-2">
+                            <Star size={14} strokeWidth={2.5} className="text-accent" />
+                            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-black">Featured Tools</h2>
+                        </div>
+                        <div className="flex-grow h-px bg-slate-200"></div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {featuredTools.map((tool, idx) => (
+                            <motion.div
+                                key={tool.slug}
+                                initial={{ opacity: 0, y: 16 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.3, delay: idx * 0.06 }}
+                                className="h-full"
+                            >
+                                <ToolCard {...tool} />
+                            </motion.div>
+                        ))}
+                    </div>
+                </section>
+            )}
 
             {/* Tools Section Label */}
             <div className="flex items-center gap-4 mb-8">

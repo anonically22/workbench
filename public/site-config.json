@@ -1,0 +1,12 @@
+{
+  "homepageMode": "enhanced",
+  "enableThemes": true,
+  "featuredTools": [
+    "qr-forge",
+    "contrast-checker",
+    "css-grid-generator",
+    "gradient-generator",
+    "json-formatter",
+    "svg-path-visualizer"
+  ]
+}

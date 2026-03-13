@@ -2,6 +2,7 @@ import { Outlet, useLocation, Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Grid, Github, ArrowUpRight, Terminal } from 'lucide-react';
 import PegboardAnimation from './PegboardAnimation';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Layout() {
     const location = useLocation();
@@ -23,12 +24,15 @@ export default function Layout() {
                         <span className="font-bold text-3xl uppercase tracking-[0.2em] text-black mt-1">WORKBENCH</span>
                     </Link>
 
-                    {/* Code/Design Animation Element */}
-                    {location.pathname === '/' && (
-                        <div className="hidden sm:block">
-                            <PegboardAnimation />
-                        </div>
-                    )}
+                    {/* Right side: animation + theme switcher */}
+                    <div className="flex items-center gap-3">
+                        {location.pathname === '/' && (
+                            <div className="hidden sm:block">
+                                <PegboardAnimation />
+                            </div>
+                        )}
+                        <ThemeSwitcher />
+                    </div>
                 </header>
 
                 <main className="flex-grow">
