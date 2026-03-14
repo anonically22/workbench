@@ -1,0 +1,16 @@
+/* ─── THEME: Blue ──────────────────────────────────────────────── */
+[data-theme="blue"] {
+  --color-background: #eff6ff;
+  --color-surface: #ffffff;
+  --color-accent: #2563eb;
+  --color-text-primary: #1e3a5f;
+  --color-text-secondary: #6b7fa8;
+  --color-border: #bfdbfe;
+  --color-sidebar: #dbeafe;
+  --color-black: #1e3a5f;
+  --shadow-brutalist: 4px 4px 0px 0px #1e3a5f;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #1e3a5f;
+}
+[data-theme="blue"] body {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.12) 2px, transparent 2px);
+}

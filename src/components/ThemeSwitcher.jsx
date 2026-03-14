@@ -7,6 +7,9 @@ const THEMES = [
     { id: 'blue',     label: 'Blue',      swatch: ['#eff6ff', '#2563eb', '#1e3a5f'] },
     { id: 'colorlab', label: 'Color Lab', swatch: ['#faf5ff', '#8b5cf6', '#3b1f6e'] },
     { id: 'dark',     label: 'Dark',      swatch: ['#0f0f11', '#6366f1', '#e4e4e7'] },
+    { id: 'candy',    label: 'Candy',     swatch: ['#fff5f7', '#e11d74', '#4a1942'] },
+    { id: 'tropical', label: 'Tropical',  swatch: ['#f0fdfa', '#0d9488', '#134e4a'] },
+    { id: 'sunset',   label: 'Sunset',    swatch: ['#fff7ed', '#ea580c', '#431407'] },
 ];
 
 const STORAGE_KEY = 'workbench-theme';
@@ -57,7 +60,7 @@ export default function ThemeSwitcher() {
         <div className="relative" ref={ref}>
             <button
                 onClick={() => setOpen(!open)}
-                className="border-2 border-black bg-surface p-2 hover:bg-accent hover:text-white transition-colors brutalist-shadow-sm flex items-center gap-2"
+                className="border-2 border-black bg-surface w-10 h-10 hover:bg-accent hover:text-white transition-colors brutalist-shadow-sm flex items-center justify-center"
                 aria-label="Switch theme"
                 title="Switch theme"
             >

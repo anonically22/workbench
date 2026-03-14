@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { SiteConfigProvider } from './context/SiteConfigContext';
 import Layout from './components/Layout';
@@ -7,76 +7,7 @@ import ManagePanel from './pages/ManagePanel';
 import ToolShell from './components/ToolShell';
 import { tools } from './data/tools';
 import { RefreshCw } from 'lucide-react';
-
-// Statically map complete lazy imports for Vite
-const toolComponentMap = {
-  "qr-forge": lazy(() => import('./tools/greatest-hits/QRGenerator.jsx')),
-  "palette-lab": lazy(() => import('./tools/greatest-hits/PaletteGenerator.jsx')),
-  "social-cropper": lazy(() => import('./tools/social-media/SocialMediaCropper.jsx')),
-  "aspect-calculator": lazy(() => import('./tools/layout-spacing/AspectRatioCalculator.jsx')),
-  "svg-surgeon": lazy(() => import('./tools/images-assets/SVGOptimiser.jsx')),
-  "unit-converter": lazy(() => import('./tools/calculators/UnitConverter.jsx')),
-  "gradient-generator": lazy(() => import('./tools/colour/GradientGenerator.jsx')),
-  "contrast-checker": lazy(() => import('./tools/colour/ContrastChecker.jsx')),
-  "json-formatter": lazy(() => import('./tools/developer-tools/JSONFormatter.jsx')),
-  "slug-generator": lazy(() => import('./tools/developer-tools/SlugGenerator.jsx')),
-  "word-counter": lazy(() => import('./tools/typography-text/WordCounter.jsx')),
-  "password-generator": lazy(() => import('./tools/developer-tools/PasswordGenerator.jsx')),
-  "markdown-previewer": lazy(() => import('./tools/content-writing/MarkdownPreviewer.jsx')),
-  "image-compressor": lazy(() => import('./tools/images-assets/ImageCompressor.jsx')),
-  "favicon-generator": lazy(() => import('./tools/images-assets/FaviconGenerator.jsx')),
-
-  // Phase 2 Tools
-  "tint-shade-generator": lazy(() => import('./tools/colour/TintShadeGenerator.jsx')),
-  "tailwind-shade-generator": lazy(() => import('./tools/colour/TailwindShades.jsx')),
-  "color-name-finder": lazy(() => import('./tools/colour/ColourNameFinder.jsx')),
-  "accessible-color-pair-finder": lazy(() => import('./tools/colour/AccessiblePairs.jsx')),
-
-  "image-resizer": lazy(() => import('./tools/images-assets/ImageResizer.jsx')),
-  "base64-image-encoder": lazy(() => import('./tools/images-assets/Base64Encoder.jsx')),
-  "exif-metadata-viewer": lazy(() => import('./tools/images-assets/EXIFDataViewer.jsx')),
-  "noise-texture-generator": lazy(() => import('./tools/images-assets/NoiseGenerator.jsx')),
-
-  "diff-checker": lazy(() => import('./tools/developer-tools/DiffChecker.jsx')),
-  "encoding-tools": lazy(() => import('./tools/developer-tools/EncodingTools.jsx')),
-  "box-shadow-generator": lazy(() => import('./tools/ui-components/BoxShadowGenerator.jsx')),
-
-  "grid-system-calculator": lazy(() => import('./tools/layout-spacing/GridSystemCalculator.jsx')),
-
-  // Phase 3 Tools
-  "button-style-generator": lazy(() => import('./tools/ui-components/ButtonStyleGenerator.jsx')),
-  "shadow-palette-generator": lazy(() => import('./tools/ui-components/ShadowPaletteGenerator.jsx')),
-  "border-radius-scale-generator": lazy(() => import('./tools/ui-components/BorderRadiusScaleGenerator.jsx')),
-  "skeleton-screen-generator": lazy(() => import('./tools/ui-components/SkeletonScreenGenerator.jsx')),
-  
-  "flexbox-playground": lazy(() => import('./tools/layout-spacing/FlexboxPlayground.jsx')),
-  "golden-ratio-calculator": lazy(() => import('./tools/layout-spacing/GoldenRatioCalculator.jsx')),
-  "8pt-grid-checker": lazy(() => import('./tools/layout-spacing/EightPointGridChecker.jsx')),
-  
-  "text-case-converter": lazy(() => import('./tools/content-writing/TextCaseConverter.jsx')),
-  "lorem-ipsum-generator": lazy(() => import('./tools/content-writing/LoremIpsumGenerator.jsx')),
-  "readability-checker": lazy(() => import('./tools/content-writing/ReadabilityChecker.jsx')),
-  
-  "fake-data-generator": lazy(() => import('./tools/dev-utilities/FakeDataGenerator.jsx')),
-  "character-map-browser": lazy(() => import('./tools/dev-utilities/CharacterMapBrowser.jsx')),
-  
-  // Phase 4 Tools
-  "mockup-frame-generator": lazy(() => import('./tools/images-assets/MockupFrameGenerator.jsx')),
-  "seamless-scroll-generator": lazy(() => import('./tools/images-assets/SeamlessScrollGenerator.jsx')),
-  "watermarker": lazy(() => import('./tools/images-assets/Watermarker.jsx')),
-  "screen-color-picker": lazy(() => import('./tools/images-assets/ScreenColorPicker.jsx')),
-
-  "touch-target-checker": lazy(() => import('./tools/design-inspection/TouchTargetChecker.jsx')),
-  "reading-flow-simulator": lazy(() => import('./tools/design-inspection/ReadingFlowSimulator.jsx')),
-  "artboard-size-reference": lazy(() => import('./tools/design-inspection/ArtboardSizeReference.jsx')),
-
-  "bleed-margin-calculator": lazy(() => import('./tools/layout-spacing/BleedMarginCalculator.jsx')),
-  "export-multiplier-calculator": lazy(() => import('./tools/layout-spacing/ExportMultiplierCalculator.jsx')),
-
-  "css-clamp-generator": lazy(() => import('./tools/dev-utilities/CssClampGenerator.jsx')),
-  "css-grid-generator": lazy(() => import('./tools/dev-utilities/CssGridGenerator.jsx')),
-  "svg-path-visualizer": lazy(() => import('./tools/dev-utilities/SvgPathVisualizer.jsx')),
-};
+import toolComponentMap from './app/routes';
 
 function App() {
   return (

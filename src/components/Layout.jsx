@@ -12,7 +12,7 @@ export default function Layout() {
     };
 
     return (
-        <div className="min-h-screen text-slate-900 selection:bg-primary/20 flex flex-col">
+        <div className="min-h-screen text-[var(--color-text-primary)] selection:bg-accent/20 flex flex-col">
             <div className="max-w-[1200px] mx-auto px-4 md:px-6 w-full flex-grow flex flex-col pt-8">
 
                 {/* Global Header */}
@@ -21,7 +21,7 @@ export default function Layout() {
                         <div className="bg-accent w-10 h-10 border-2 border-black flex items-center justify-center text-white brutalist-shadow-sm">
                             <Grid size={20} strokeWidth={2.5} />
                         </div>
-                        <span className="font-bold text-3xl uppercase tracking-[0.2em] text-black mt-1">WORKBENCH</span>
+                        <span className="font-bold text-3xl uppercase tracking-[0.2em] text-[var(--color-text-primary)] mt-1">WORKBENCH</span>
                     </Link>
 
                     {/* Right side: animation + theme switcher */}
@@ -51,14 +51,14 @@ export default function Layout() {
             </div>
 
             {/* Brutalist Technical Footer */}
-            <footer className="bg-white text-black py-16 mt-20 border-t-8 border-black font-sans">
+            <footer className="bg-[var(--color-surface)] text-[var(--color-text-primary)] py-16 mt-20 border-t-8 border-[var(--color-black)] font-sans">
                 <div className="max-w-[1200px] mx-auto px-4 md:px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b-4 border-black pb-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-b-4 border-[var(--color-black)] pb-16">
 
                         {/* Brand Column */}
                         <div className="space-y-6">
-                            <div className="flex items-center gap-3 text-black">
-                                <div className="border-2 border-black p-1 bg-accent/10 flex items-center justify-center">
+                            <div className="flex items-center gap-3 text-[var(--color-text-primary)]">
+                                <div className="border-2 border-[var(--color-black)] p-1 bg-accent/10 flex items-center justify-center">
                                     <Grid size={24} strokeWidth={2.5} className="text-accent" />
                                 </div>
                                 <span className="font-bold text-2xl uppercase tracking-[0.3em]">WORKBENCH</span>
@@ -90,9 +90,9 @@ export default function Layout() {
                         {/* System Status */}
                         <div className="space-y-6">
                             <h4 className="text-base font-bold uppercase tracking-[0.3em]">TOOL STATUS</h4>
-                            <div className="bg-white border-2 border-black p-4 flex items-center gap-3 brutalist-shadow-sm">
-                                <span className="w-3 h-3 rounded-none bg-blue-500 animate-pulse border-2 border-black"></span>
-                                <span className="text-sm font-bold tracking-[0.2em] uppercase text-black">ALL TOOLS WORKING</span>
+                            <div className="bg-[var(--color-surface)] border-2 border-[var(--color-black)] p-4 flex items-center gap-3 brutalist-shadow-sm">
+                                <span className="w-3 h-3 rounded-none bg-blue-500 animate-pulse border-2 border-[var(--color-black)]"></span>
+                                <span className="text-sm font-bold tracking-[0.2em] uppercase text-[var(--color-text-primary)]">ALL TOOLS WORKING</span>
                             </div>
                         </div>
                     </div>
@@ -104,10 +104,10 @@ export default function Layout() {
                         </div>
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-6 w-full md:w-auto">
                             <span className="flex items-center gap-2">
-                                <span className="w-2 h-2 bg-black rounded-none"></span>
-                                BUILD VERSION v0.7
+                                <span className="w-2 h-2 bg-[var(--color-black)] rounded-none"></span>
+                                BUILD VERSION v1.0.1
                             </span>
-                            <span className="w-px h-4 bg-black/20"></span>
+                            <span className="w-px h-4 bg-[var(--color-black)]/20"></span>
                             <button onClick={scrollToTop} className="flex items-center gap-2 hover:text-accent transition-colors">
                                 TOP
                                 <ArrowUpRight size={16} />

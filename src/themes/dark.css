@@ -1,0 +1,16 @@
+/* ─── THEME: Dark ──────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-background: #0f0f11;
+  --color-surface: #1a1a1e;
+  --color-accent: #6366f1;
+  --color-text-primary: #e4e4e7;
+  --color-text-secondary: #71717a;
+  --color-border: #27272a;
+  --color-sidebar: #18181b;
+  --color-black: #e4e4e7;
+  --shadow-brutalist: 4px 4px 0px 0px rgba(255,255,255,0.15);
+  --shadow-brutalist-hover: 8px 8px 0px 0px rgba(255,255,255,0.2);
+}
+[data-theme="dark"] body {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 2px, transparent 2px);
+}

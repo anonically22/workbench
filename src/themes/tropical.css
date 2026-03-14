@@ -1,0 +1,16 @@
+/* ─── THEME: Tropical ──────────────────────────────────────────── */
+[data-theme="tropical"] {
+  --color-background: #f0fdfa;
+  --color-surface: #ffffff;
+  --color-accent: #0d9488;
+  --color-text-primary: #134e4a;
+  --color-text-secondary: #5eada6;
+  --color-border: #99f6e4;
+  --color-sidebar: #ccfbf1;
+  --color-black: #134e4a;
+  --shadow-brutalist: 4px 4px 0px 0px #134e4a;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #134e4a;
+}
+[data-theme="tropical"] body {
+  background-image: radial-gradient(rgba(13, 148, 136, 0.12) 2px, transparent 2px);
+}

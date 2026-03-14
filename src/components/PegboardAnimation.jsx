@@ -92,7 +92,7 @@ export default function PegboardAnimation() {
 
     return (
         <div
-            className="relative border-2 border-black bg-slate-100 flex items-center justify-center overflow-hidden h-12 w-[200px] brutalist-shadow-sm group cursor-default select-none"
+            className="relative border-2 border-black bg-slate-100 flex items-center justify-center overflow-hidden h-10 w-[200px] brutalist-shadow-sm group cursor-default select-none"
             style={{ contain: 'layout paint' }}
         >
             {/* Pegboard dot grid */}

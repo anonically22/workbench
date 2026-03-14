@@ -457,5 +457,59 @@ export const tools = [
         category: "DEV UTILITIES",
         tags: ["svg", "code"],
         icon: "timeline"
+    },
+    {
+        id: "WB-052",
+        slug: "color-blindness-simulator",
+        name: "Color Blindness Simulator",
+        description: "Simulate how images appear under different color vision deficiencies.",
+        category: "COLOR LAB",
+        tags: ["a11y", "design"],
+        icon: "visibility"
+    },
+    {
+        id: "WB-053",
+        slug: "font-pairing-explorer",
+        name: "Font Pairing Explorer",
+        description: "Preview and explore heading/body font pairings for web and UI design.",
+        category: "TYPE & TEXT",
+        tags: ["typography", "design"],
+        icon: "text_fields"
+    },
+    {
+        id: "WB-054",
+        slug: "svg-to-jsx",
+        name: "SVG to JSX Converter",
+        description: "Convert SVG markup into React-friendly JSX format.",
+        category: "DEV UTILITIES",
+        tags: ["react", "code"],
+        icon: "transform"
+    },
+    {
+        id: "WB-055",
+        slug: "regex-tester",
+        name: "Regex Tester",
+        description: "Test regular expressions with live match highlighting and flags.",
+        category: "DEV UTILITIES",
+        tags: ["regex", "dev"],
+        icon: "manage_search"
+    },
+    {
+        id: "WB-056",
+        slug: "hash-generator",
+        name: "Hash Generator",
+        description: "Generate SHA-256 and other hashes from text using browser APIs.",
+        category: "DEV UTILITIES",
+        tags: ["security", "dev"],
+        icon: "fingerprint"
+    },
+    {
+        id: "WB-057",
+        slug: "aria-role-reference",
+        name: "ARIA Role Reference",
+        description: "Searchable reference for ARIA roles, attributes, and accessibility guidance.",
+        category: "DESIGN INSPECTION",
+        tags: ["a11y", "dev"],
+        icon: "accessibility"
     }
 ];

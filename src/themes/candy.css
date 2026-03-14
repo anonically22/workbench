@@ -1,0 +1,16 @@
+/* ─── THEME: Candy ─────────────────────────────────────────────── */
+[data-theme="candy"] {
+  --color-background: #fff5f7;
+  --color-surface: #ffffff;
+  --color-accent: #e11d74;
+  --color-text-primary: #4a1942;
+  --color-text-secondary: #a87ca0;
+  --color-border: #fbb6ce;
+  --color-sidebar: #fce7f3;
+  --color-black: #4a1942;
+  --shadow-brutalist: 4px 4px 0px 0px #4a1942;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #4a1942;
+}
+[data-theme="candy"] body {
+  background-image: radial-gradient(rgba(225, 29, 116, 0.15) 2px, transparent 2px);
+}

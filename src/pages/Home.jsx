@@ -39,8 +39,8 @@ export default function Home() {
                 </p>
                 <div className="flex flex-wrap items-center gap-3 text-xs font-bold uppercase tracking-widest">
                     <span className="bg-accent/10 text-accent border-2 border-accent px-3 py-1">{tools.length} Tools</span>
-                    <span className="bg-slate-100 border-2 border-slate-200 px-3 py-1">{categories.length - 1} Categories</span>
-                    <span className="bg-slate-100 border-2 border-slate-200 px-3 py-1">100% Browser Based</span>
+                    <span className="bg-[var(--color-surface)] border-2 border-[var(--color-border)] px-3 py-1">{categories.length - 1} Categories</span>
+                    <span className="bg-[var(--color-surface)] border-2 border-[var(--color-border)] px-3 py-1">100% Browser Based</span>
                 </div>
             </div>
 
@@ -50,9 +50,9 @@ export default function Home() {
                     <div className="flex items-center gap-4 mb-8">
                         <div className="flex items-center gap-2">
                             <Star size={14} strokeWidth={2.5} className="text-accent" />
-                            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-black">Featured Tools</h2>
+                            <h2 className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-text-primary)]">Featured Tools</h2>
                         </div>
-                        <div className="flex-grow h-px bg-slate-200"></div>
+                        <div className="flex-grow h-px bg-[var(--color-border)]"></div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {featuredTools.map((tool, idx) => (
@@ -72,8 +72,8 @@ export default function Home() {
 
             {/* Tools Section Label */}
             <div className="flex items-center gap-4 mb-8">
-                <h2 className="text-xs font-black uppercase tracking-[0.2em] text-black">{tools.length} Tools in the Workshop</h2>
-                <div className="flex-grow h-px bg-slate-200"></div>
+                <h2 className="text-xs font-black uppercase tracking-[0.2em] text-[var(--color-text-primary)]">{tools.length} Tools in the Workshop</h2>
+                <div className="flex-grow h-px bg-[var(--color-border)]"></div>
             </div>
 
             {/* Navigation / Categories */}
@@ -84,10 +84,10 @@ export default function Home() {
                             key={cat}
                             onClick={() => setActiveCategory(cat)}
                             className={cn(
-                                "whitespace-nowrap px-6 py-2 font-bold uppercase border-2 border-black transition-colors focus:outline-none",
+                                "whitespace-nowrap px-6 py-2 font-bold uppercase border-2 border-[var(--color-black)] transition-colors focus:outline-none",
                                 activeCategory === cat
-                                    ? "bg-black text-white"
-                                    : "bg-white text-black hover:bg-slate-100"
+                                    ? "bg-[var(--color-black)] text-[var(--color-surface)]"
+                                    : "bg-[var(--color-surface)] text-[var(--color-text-primary)] hover:bg-[var(--color-background)]"
                             )}
                         >
                             {cat}
@@ -112,7 +112,7 @@ export default function Home() {
                     ))}
                 </main>
             ) : (
-                <div className="py-20 text-center border-2 border-black border-dashed">
+                <div className="py-20 text-center border-2 border-[var(--color-black)] border-dashed">
                     <p className="text-2xl font-black uppercase">No tools found.</p>
                 </div>
             )}

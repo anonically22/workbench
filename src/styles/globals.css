@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "../themes/blue.css";
+@import "../themes/colorful.css";
+@import "../themes/dark.css";
+@import "../themes/candy.css";
+@import "../themes/tropical.css";
+@import "../themes/sunset.css";
+
+@theme {
+  --color-background: #F8FAFC;
+  --color-surface: #FFFFFF;
+  --color-accent: #0d59f2;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-border: #E2E8F0;
+  --color-sidebar: #F1F5F9;
+
+  --color-black: #000000;
+
+  --radius-card: 0px;
+
+  --shadow-brutalist: 4px 4px 0px 0px #000000;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #000000;
+
+  --font-sans: "Poiret One", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary antialiased;
+    font-family: var(--font-sans);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px);
+    background-size: 10px 10px;
+    background-position: 0 0;
+  }
+}
+
+@layer utilities {
+  .brutalist-border {
+    border: 2px solid var(--color-black);
+  }
+
+  .brutalist-shadow {
+    box-shadow: var(--shadow-brutalist);
+    transition: all 0.2s ease-out;
+  }
+
+  .brutalist-shadow-hover:hover {
+    box-shadow: var(--shadow-brutalist-hover);
+    transform: translate(-4px, -4px);
+  }
+
+  .brutalist-shadow-sm {
+    box-shadow: 2px 2px 0px 0px var(--color-black);
+  }
+
+  /* Hide scrollbar for clean horizontal scrolling */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

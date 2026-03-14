@@ -1,0 +1,16 @@
+/* ─── THEME: Color Lab ─────────────────────────────────────────── */
+[data-theme="colorlab"] {
+  --color-background: #faf5ff;
+  --color-surface: #ffffff;
+  --color-accent: #8b5cf6;
+  --color-text-primary: #3b1f6e;
+  --color-text-secondary: #8b7fb5;
+  --color-border: #e9d5ff;
+  --color-sidebar: #f3e8ff;
+  --color-black: #3b1f6e;
+  --shadow-brutalist: 4px 4px 0px 0px #3b1f6e;
+  --shadow-brutalist-hover: 8px 8px 0px 0px #3b1f6e;
+}
+[data-theme="colorlab"] body {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.12) 2px, transparent 2px);
+}
