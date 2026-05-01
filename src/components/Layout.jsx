@@ -105,7 +105,7 @@ export default function Layout() {
                         <div className="flex flex-col md:flex-row items-start md:items-center gap-6 w-full md:w-auto">
                             <span className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-[var(--color-black)] rounded-none"></span>
-                                BUILD VERSION v1.0.1
+                                BUILD VERSION v1.0.2
                             </span>
                             <span className="w-px h-4 bg-[var(--color-black)]/20"></span>
                             <button onClick={scrollToTop} className="flex items-center gap-2 hover:text-accent transition-colors">

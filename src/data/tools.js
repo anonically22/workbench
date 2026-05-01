@@ -99,15 +99,6 @@ export const tools = [
         icon: "notes"
     },
     {
-        id: "WB-012",
-        slug: "password-generator",
-        name: "Password Generator",
-        description: "Generate secure random passwords.",
-        category: "DEV UTILITIES",
-        tags: ["security", "utility"],
-        icon: "password"
-    },
-    {
         id: "WB-013",
         slug: "markdown-previewer",
         name: "Markdown Previewer",
@@ -304,15 +295,6 @@ export const tools = [
         category: "LAYOUT TOOL",
         tags: ["math", "design"],
         icon: "grid_on"
-    },
-    {
-        id: "WB-035",
-        slug: "text-case-converter",
-        name: "Text Case Converter",
-        description: "Convert text between uppercase, lowercase, camelCase, snake_case, kebab-case and more.",
-        category: "TEXT & CONTENT",
-        tags: ["text", "utility"],
-        icon: "text_format"
     },
     {
         id: "WB-036",
